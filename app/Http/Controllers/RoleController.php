@@ -35,8 +35,9 @@ class RoleController extends Controller
     public function show(Request $request)
     {
         $role = Role::with('users')->find($request->id);
+        $roleUserIds = $role->users->pluck('id')->toArray();
         $users = User::get();
-        return view('role.show', compact('role', 'users'));
+        return view('role.show', compact('role', 'users', 'roleUserIds'));
     }
     public function update() {}
     public function delete(Request $request)
@@ -55,6 +56,7 @@ class RoleController extends Controller
     {
         $role = Role::find($request->id);
         $users = $request->user;
+
         $role->users()->sync($users);
         if ($role) {
             return redirect()->route('role.index')->with('success', 'Role Assigned successfully');

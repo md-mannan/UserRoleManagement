@@ -84,7 +84,8 @@ class UserController extends Controller
 
         $user = User::with('roles')->find($request->id);
         $roles = Role::get();
-        return view('user.show', compact('user', 'roles'));
+        $userRoleIds = $user->roles->pluck('id')->toArray();
+        return view('user.show', compact('user', 'roles', 'userRoleIds'));
     }
 
     public function RoleAssigntoRole(Request $request)
