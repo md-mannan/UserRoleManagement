@@ -3,7 +3,7 @@
 @section('title', 'Create User')
 
 @section('content')
-    <div class="row mt-5"></div>
+    <div class="row "></div>
 
     <div class="col-12">
         <div class="card">
@@ -33,7 +33,7 @@
 
 
 
-                        <button type="submit" class="btn btn-success mt-5">Update</button>
+                        <button type="submit" class="btn btn-success ">Update</button>
                     </form>
                 </div>
 

@@ -87,7 +87,7 @@ class UserController extends Controller
         return view('user.show', compact('user', 'roles'));
     }
 
-    public function updateRole(Request $request)
+    public function RoleAssigntoRole(Request $request)
     {
         $user = User::find($request->id);
         $roles = $request->role;

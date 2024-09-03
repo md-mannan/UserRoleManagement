@@ -3,7 +3,7 @@
 @section('title', 'View User')
 
 @section('content')
-    <div class="row mt-5">
+    <div class="row ">
     </div>
 
     <div class="col-12">
@@ -39,7 +39,7 @@
                             </div>
                         @endforeach
 
-                        <button type="submit" class="btn btn-success mt-5">Assign Role</button>
+                        <button type="submit" class="btn btn-success ">Assign Role</button>
                     </form>
 
 
